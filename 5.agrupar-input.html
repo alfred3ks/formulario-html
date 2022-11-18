@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agrupar inputs.</title>
+</head>
+<body>
+  <!--
+      fieldset -> Se utiliza para agrupar elementos dentro de un formulario.
+      legend -> Representa una etiqueta para el contenido del fieldset
+      file -> Este input se utiliza para cargar archivos y enviarlos desde el formulario.
+      meter -> Representa un valor dentro de un rango conocido.
+      progress -> represeta el progreso de una tarea.
+      textarea -> Se usa para introducir text en un formaulario.
+    -->
+  <form>
+    <h2>Mas cosas que podemos usar en los formularios</h2>
+
+    <fieldset>
+      <legend>Datos personales</legend>
+      <div>
+        <label for="nombre" id="labelNombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre">
+      </div>
+      <div>
+        <label for="apellido" id="labelApellido">Apellido</label>
+        <input type="text" name="apellido" id="apellido">
+      </div>
+    </fieldset>
+
+    <p>fielset genera un marco alrededor.</p>
+    <p>Con la etiqueta legend podemos darle informacion sobre esos inputa que estan envueltos por fieldset.</p>
+
+    <input type="file">
+
+    <br>
+    <br>
+
+    <label for="fuel">COMBUSTIBLE</label>
+    <meter id="fuel" min="0" max="100" value="40" low="30" high="75" optimum="50"></meter>
+    <p>Para ver como funciona podemos empezar sin atributos e ir jugando con ellos.</p>
+
+    <label for="task">Tarea 1</label>
+    <progress id="task" max="100" value="10"></progress>
+    <p>podemos jugar con los atributos max y value si los quitamos vemos como se mueve de un lado a otro. Esta tambien
+      poco se usa.</p>
+
+    <label for="mensaje">Mensaje:</label>
+    <div>
+      <textarea name="textArea" id="mensaje" cols="30" rows="10"></textarea>
+    </div>
+    <p>El ancho podemos jugar con el css para evitar que sea adapable.</p>
+  </form>
+</body>
+</html>

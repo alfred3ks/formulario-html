@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atributos.</title>
+</head>
+<body>
+  <!--
+    Atributos mas usados:
+    placeholder -> Da una pista lo que el usuario debe introducir
+    required -> hace que el campo sea obligatorio.
+    readonly -> Hace que el campo sea solo de lectura.
+    min - max -> Establece un min y max de un campo numerico.
+    maxlenght - minlenght-> Establece un maximo y un minimo de caracteres de un campo.
+    selected -> Equivale a un checked en los select, establece valor por defecto.
+    disabled -> desactiva el campo, no se podra escribir en el autofocus.
+    autofocus -> Para poner le foco por defecto al cargar el formulario
+  -->
+  <form>
+    <h2>Atributos mas usados:</h2>
+    <input type="text" placeholder="Introduce tu nombre" required autofocus>
+    <input type="text" value="Hola" readonly>
+    <input type="text" value="Disable" disable>
+    <select name="numeros">
+      <option selected>Numeros</option>
+      <option value="one">ONE</option>
+      <option value="two">TWO</option>
+    </select>
+    <input type="number" min="5" max="10">
+    <input type="text" minlength="3" maxlength="15">
+    <input type="submit" value="Enviar">
+
+  </form>
+
+  <p>Diferencias entre readonly es que aunque el campo es solo de lectura se puede enviar pero con disable no se envia.
+  </p>
+  <p>Los atributos min-max ambos no son obligatorios con poner uno de ellos funciona dependera de lo que necesitemos.
+  </p>
+  <p>Los atributos minlength y maxlength para input de texto.</p>
+  <p>El atributo autofocus ahi comienza el formulario por defecto.</p>
+
+</body>
+</html>

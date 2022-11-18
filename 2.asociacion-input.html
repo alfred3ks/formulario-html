@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asociación de input.</title>
+</head>
+<body>
+  <!--
+        Como asociamos los input con los label:
+        label -> debe tener el atributo for al cual se le indica el nombre del id del input, lo hara emparejar el label con el input.
+        input -> Debe llevar un atributo obligatorio name, ese es el valor que viajara cuando se envie el formulario, para asociar este input con un label debe llevar un atributo id igual que el atributo for del label:
+      -->
+  <form>
+    <label for="inputNombre">Nombre</label>
+    <input type="text" name="nombre" id="inputNombre">
+    <button>Enviar formulario</button>
+  </form>
+
+
+</body>
+</html>

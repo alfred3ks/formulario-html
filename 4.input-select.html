@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select.</title>
+</head>
+<body>
+  <!--
+      inputs de tipo seleccionable:
+      - radio -> Permite seleccionar una unica opcion de una lista de opciones relacionadas.
+      - checkbox-> Permite seleccionar carais opciones de una lista de opciones seleccionads.
+      - select -> crea una lista de opciones donde podemos seleccionar una o varias opciones. Cada opcion debera llevar la etiqueta <optio></opcion>, si tenemos mas opciones podemos ordenarlas por categorias a traves de la etiqueta <optgroup></opgroup> con el atributo label para nombrarlas.
+    -->
+  <form>
+    <h2>Input de tipo radio button:</h2>
+    <div>
+      <label for="generoMasculino">Masculino</label>
+      <input type="radio" id="generoMasculino" name="genero" value="masculino" checked>
+    </div>
+    <div>
+      <label for="generoFemenino">Femenino</label>
+      <input type="radio" id="generoFemenino" name="genero" value="femenino">
+    </div>
+    <div>
+      <label for="generoDesc">A saber...</label>
+      <input type="radio" id="generoDesc" name="genero" value="desconocido">
+    </div>
+    <p>Como los tres input llevan el mismo name estan relacionados.</p>
+    <p>El atributo value es el valor que se usara para recogerlo por JS, recogera genero: masculino,
+      genero:femenino,genero:desconocido</p>
+
+    <h2>Input de tipo radio checkbox:</h2>
+    <div>
+      <input type="checkbox" name="lenguaje" id="html" value="HTML" checked>
+      <label for="html">HTML</label>
+    </div>
+    <div>
+      <input type="checkbox" name="lenguaje" id="css" value="CSS">
+      <label for="css">CSS</label>
+    </div>
+    <div>
+      <input type="checkbox" name="lenguaje" id="js" value="JS">
+      <label for="js">JavaScript</label>
+    </div>
+    <p>Son muy parecido a los de tipo radio con la diferencia que los checkbosx nos permite seleccionar de una lista
+      relacionada</p>
+    <p>Aqui igual vemos el name con sus repectivos value, ambos atributos son importantes para poder manejar con JS</p>
+
+    <h2>Input de tipo select:</h2>
+    <select name="lenguajes" id="lenguajes">
+      <option selected>Lenguajes</option>
+      <option value="HTML">HTML</option>
+      <option value="CSS">CSS</option>
+      <option value="JavaScript">JavaScript</option>
+      <option value="PHP">PHP</option>
+      <option value="Java">Java</option>
+    </select>
+    <br>
+    <br>
+    <select name="lenguajes" id="lenguajes" multiple>
+      <option selected>Lenguajes</option>
+      <option value="HTML">HTML</option>
+      <option value="CSS">CSS</option>
+      <option value="JavaScript">JavaScript</option>
+      <option value="PHP">PHP</option>
+      <option value="Java">Java</option>
+    </select>
+
+    <p>El value de la etiqueta option es el valor de su contenido.</p>
+    <p>Podemos poner una option con el atributo select por defecto</p>
+    <p>Si colocamos el atributo multiple la seleccion de los valores puede ser multiple</p>
+
+    <h2>Vemos otro tipo de select: algo diferente.</h2>
+    <p>Usaremos la etiqueta optgroup para agruparlos.</p>
+    <p>Aqui el interesante es el atributo label para crear los subgrupos</p>
+    <select name="mascotas" id="mascotas">
+      <option selected>Animales</option>
+      <optgroup label="4 patas">
+        <option value="perro">Perro</option>
+        <option value="gato">Gato</option>
+        <option value="hamster">Hamster</option>
+        <option value="conejo">Conejo</option>
+      </optgroup>
+      <optgroup label="aves">
+        <option value="loro">Loro</option>
+        <option value="canario">Canario</option>
+      </optgroup>
+      <optgroup label="otras">
+        <option value="serpiente">Serpiente</option>
+        <option value="tarantula">Tarantula</option>
+      </optgroup>
+    </select>
+
+    <h2>Los datalist</h2>
+    <p>Otro elemento de lista que llego con HTML5</p>
+    <p>incluyen un filtro para buscar informacion mas sencilla</p>
+
+    <input type="list" list="pets">
+    <datalist id="pets">
+      <option>Perro</option>
+      <option value="Gato"></option>
+      <option>Hamster</option>
+      <option>Conejo</option>
+    </datalist>
+
+    <p>Para este tipo de lista debemos suprimir o bien el value o el texto que tiene la option dependera lo que ussemos.
+    </p>
+    <p>Al ser un input podemos usarlo como filtro al poner una letra nos mostrara los elementos que incluyan esa letra.
+    </p>
+
+  </form>
+</body>
+</html>
